@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "441689170782",
+    "project_id": "heathub-8dd08",
+    "storage_bucket": "heathub-8dd08.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441689170782:android:9be60ca9f435041bd8a5cf",
+        "android_client_info": {
+          "package_name": "com.example.heathub_splash"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdDHM15uULocF1Nl2kM1-Ro67ybppXjK0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
