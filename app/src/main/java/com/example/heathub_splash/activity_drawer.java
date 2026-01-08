@@ -18,6 +18,7 @@ public class activity_drawer extends AppCompatActivity {
     FirebaseAuth mAuth;
     Button btnOpenDrawer;
     Button btnHome, btnMode, btnuserinfo,btnlogout;
+    Button btnOpenQR;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,7 @@ public class activity_drawer extends AppCompatActivity {
         btnHome = findViewById(R.id.btnHome);
         btnMode = findViewById(R.id.btnMode);
         btnuserinfo = findViewById(R.id.btnuserinfo);
+        btnOpenQR = findViewById(R.id.btnOpenQR);
 
 
         btnOpenDrawer.setOnClickListener(v -> drawerLayout.openDrawer(GravityCompat.START));
@@ -59,6 +61,11 @@ public class activity_drawer extends AppCompatActivity {
             Intent intent = new Intent(activity_drawer.this, login.class);
             startActivity(intent);
 
+        });
+        btnOpenQR.setOnClickListener(v -> {
+            Intent intent = new Intent(activity_drawer.this, barcode.class);
+            startActivity(intent);
+            drawerLayout.closeDrawer(GravityCompat.START);
         });
     }
 }

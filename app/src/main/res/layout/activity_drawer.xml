@@ -69,6 +69,13 @@ android:layout_height="match_parent"
         android:text="logout"
         android:backgroundTint="#C5C51B"
         android:padding="12dp"/>
+    <Button
+        android:id="@+id/btnOpenQR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Open QR Scanner"
+        android:backgroundTint="#C5C51B"
+        android:layout_centerInParent="true"/>
 </LinearLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>
