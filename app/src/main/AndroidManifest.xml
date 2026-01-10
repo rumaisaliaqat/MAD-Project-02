@@ -20,9 +20,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Heathub_Splash">
         <activity
+            android:name=".activity_forgot_password"
+            android:exported="false" />
+        <activity
             android:name=".userlist"
-            android:exported="false"
-            />
+            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"

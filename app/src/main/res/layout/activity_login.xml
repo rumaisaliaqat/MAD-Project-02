@@ -112,6 +112,17 @@
                 android:textColor="#FFFFFF"
                 android:textSize="14dp"
                 android:textStyle="bold">
+            </TextView>
+            <TextView
+                android:id="@+id/forgettxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6dp"
+                android:text="Forget Password"
+                android:textColor="#FFFFFF"
+                android:textSize="14dp"
+                android:textStyle="bold">
 
             </TextView>
         </LinearLayout>

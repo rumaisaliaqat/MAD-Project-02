@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -26,6 +27,7 @@ public class login extends AppCompatActivity {
     Button btn;
     FirebaseAuth mAuth;
     EditText  etEmail, etPass;
+
     @SuppressLint("MissingInflatedId")
     @Override
     public void onStart() {
@@ -42,6 +44,13 @@ public class login extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Maan lijiye aapke TextView ki ID forgotPass hai
+        TextView forgotPass = findViewById(R.id.forgettxt);
+
+        forgotPass.setOnClickListener(v -> {
+            Intent intent = new Intent(login.this, activity_forgot_password.class);
+            startActivity(intent);
+        });
 
         setContentView(R.layout.activity_login);
         mAuth = FirebaseAuth.getInstance();
