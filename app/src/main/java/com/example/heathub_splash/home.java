@@ -76,7 +76,7 @@ public class home extends AppCompatActivity {
         });
 
         nvAi.setOnClickListener(v -> {
-            startActivity(new Intent(home.this, chatbot_ai.class));
+            startActivity(new Intent(home.this, chatbot.class));
             drawerLayout.closeDrawer(GravityCompat.START);
         });
 
