@@ -20,7 +20,7 @@ public class home extends AppCompatActivity {
     ListView listView;
 
     // Menu items for side drawer (TextViews instead of Buttons)
-    TextView navHome, navMode, navUser, navQR, navLogout;
+    TextView navHome, navMode, navUser, navQR, navLogout ,nvAi;
 
     String[] items = {"Popcorn", "Reheat", "Grill", "Defrost", "Warm Milk", "Bake", "Steam Vegetables", "Pizza", "Chicken Roast", "French Fries"};
     int[] icons = {R.drawable.pop, R.drawable.reheat, R.drawable.grill, R.drawable.defrost, R.drawable.warm_milk, R.drawable.bake, R.drawable.steam, R.drawable.pizz, R.drawable.chicken, R.drawable.fries};
@@ -49,6 +49,8 @@ public class home extends AppCompatActivity {
         navUser = findViewById(R.id.nav_user);
         navQR = findViewById(R.id.nav_qr);
         navLogout = findViewById(R.id.nav_logout);
+        nvAi=findViewById(R.id.nav_Ai);
+
 
         // 4. Initialize ListView
         listView = findViewById(R.id.listView);
@@ -70,6 +72,11 @@ public class home extends AppCompatActivity {
 
         navQR.setOnClickListener(v -> {
             startActivity(new Intent(home.this, barcode.class));
+            drawerLayout.closeDrawer(GravityCompat.START);
+        });
+
+        nvAi.setOnClickListener(v -> {
+            startActivity(new Intent(home.this, chatbot_ai.class));
             drawerLayout.closeDrawer(GravityCompat.START);
         });
 
