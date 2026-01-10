@@ -2,4 +2,5 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="heat_hub_primary">#4CAF50</color> <color name="drawer_bg">#FFFFFF</color> <color name="text_white">#FFFFFF</color>
 </resources>

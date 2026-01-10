@@ -35,7 +35,7 @@ public class userInfo extends AppCompatActivity {
 
 
         btnNext.setOnClickListener(v -> {
-            Intent intent = new Intent(userInfo.this, activity_drawer.class);
+            Intent intent = new Intent(userInfo.this, barcode.class);
             intent.putExtra("username", name);
             intent.putExtra("age", age);
             startActivity(intent);

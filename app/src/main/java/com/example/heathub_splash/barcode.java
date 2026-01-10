@@ -1,6 +1,7 @@
 package com.example.heathub_splash;
 import android.os.Bundle;
 
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -18,6 +19,13 @@ public class barcode extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_barcode);
+        // Scanner line animation logic
+        View scanLine = findViewById(R.id.scanLine);
+        android.view.animation.Animation animation = new android.view.animation.TranslateAnimation(
+                0, 0, 0, 750); // Line move distance
+        animation.setDuration(2000);
+        animation.setRepeatCount(android.view.animation.Animation.INFINITE);
+        scanLine.startAnimation(animation);
 
         btnScanQR = findViewById(R.id.btnScan);
 

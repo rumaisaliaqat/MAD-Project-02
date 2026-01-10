@@ -1,16 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0C2385">
 
-    <Button
-        android:id="@+id/btnScan"
+    <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#ABAB3A"
-        android:text="Scan QR Code"
-        android:textColor="@color/black"
-        android:layout_centerInParent="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="Ready to Scan?"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Align the food barcode within the frame"
+        android:textColor="#A0FFFFFF"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:id="@+id/scannerFrame"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/scanner_border">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="20dp"
+            android:background="#FFC107"
+            android:id="@+id/scanLine"/>
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnScan"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/scannerFrame"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_gradient"
+        android:elevation="10dp"
+        android:text="START SCANNING"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+
 </RelativeLayout>
