@@ -39,11 +39,23 @@ dependencies {
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation(libs.firebase.auth)
+    implementation("com.google.android.gms:play-services-ads:23.0.0")
     implementation("com.google.ai.client.generativeai:generativeai:0.9.0")
     implementation("com.google.guava:guava:31.1-android")
     implementation("com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava")
 
+// Firebase BoM (Bill of Materials)
+    implementation(platform("com.google.android.gms:play-services-ads:23.0.0"))
+    implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
 
+    // Firebase Libraries
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-database")
+    implementation("com.google.firebase:firebase-firestore")
+
+    // UI Libraries
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+    implementation("androidx.cardview:cardview:1.0.0")
     // Baki testing libs
     implementation("com.journeyapps:zxing-android-embedded:4.3.0")
     implementation(libs.firebase.crashlytics.buildtools)
