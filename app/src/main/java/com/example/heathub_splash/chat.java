@@ -1,5 +1,7 @@
 package com.example.heathub_splash;
 
+import static android.content.Intent.getIntent;
+
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
