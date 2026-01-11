@@ -146,6 +146,22 @@ public class home extends AppCompatActivity {
                     }
                 });
     }
+    private void loadMyAd() {
+        AdRequest adRequest = new AdRequest.Builder().build();
+        // Yeh test ID hai
+        InterstitialAd.load(this, "ca-app-pub-3940256099942544/1033173712", adRequest,
+                new InterstitialAdLoadCallback() {
+                    @Override
+                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                        mInterstitialAd = interstitialAd;
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                        mInterstitialAd = null;
+                    }
+                });
+    }
 
     @Override
     public void onBackPressed() {
